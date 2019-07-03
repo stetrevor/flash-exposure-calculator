@@ -1,3 +1,15 @@
+# Flash Exposure Calculator
+
+Constants:
+- ISO to guide number factor
+
+Variables:
+- ISO
+- Flash power output
+- Flash coverage
+- Aperture
+- Distance
+
 # flash-exposure-calculator
 
 ## Project setup
