@@ -1,14 +1,13 @@
 # Flash Exposure Calculator
 
-Constants:
-- ISO to guide number factor
-
 Variables:
-- ISO
-- Flash power output
-- Flash coverage
-- Aperture
+- ISO, range array
+- ISO to guide number factor, range array
+- Flash power output, range array
+- Flash coverage, range array
+- Aperture, range array
 - Distance
+- Guide number, range array calculated
 
 # flash-exposure-calculator
 
