@@ -4,7 +4,6 @@
 
     <v-slider
       label="ISO"
-      max="6"
       ticks="always"
       tick-size="4"
       thumb-label="always"
@@ -13,6 +12,7 @@
       v-model="isoIndex"
       :tick-labels="isoRange"
       :value="0"
+      :max="isoRange.length - 1"
     >
       <template v-slot:thumb-label="props">
         <span>{{ isoRange[props.value] }}</span>
@@ -21,7 +21,6 @@
 
     <v-slider
       label="Flash Coverage(mm)"
-      max="6"
       ticks="always"
       tick-size="4"
       thumb-label="always"
@@ -30,6 +29,7 @@
       v-model="flashCoverageIndex"
       :tick-labels="flashCoverageRange"
       :value="0"
+      :max="flashCoverageRange.length - 1"
     >
       <template v-slot:thumb-label="props">
         <span>{{ flashCoverageRange[props.value] }}</span>
@@ -38,7 +38,6 @@
 
     <v-slider
       label="Flash Output"
-      max="7"
       ticks="always"
       tick-size="4"
       thumb-label="always"
@@ -47,6 +46,7 @@
       v-model="flashOutputIndex"
       :tick-labels="flashOutputRange.map(v => `1/${1 / v}`)"
       :value="0"
+      :max="flashOutputRange.length - 1"
     >
       <template v-slot:thumb-label="props">
         <span>{{ `1/${Math.pow(2, props.value)}` }}</span>
@@ -55,7 +55,6 @@
 
     <v-slider
       label="Aperture"
-      max="36"
       ticks="always"
       tick-size="4"
       thumb-label="always"
@@ -64,6 +63,7 @@
       v-model="apertureIndex"
       :tick-labels="apertureRange.map(v => `1/${v}`)"
       :value="0"
+      :max="apertureRange.length - 1"
     >
       <template v-slot:thumb-label="props">
         <span>{{ `1/${apertureRange[props.value]}` }}</span>
