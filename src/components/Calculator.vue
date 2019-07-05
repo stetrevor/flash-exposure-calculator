@@ -73,7 +73,7 @@
     <h2>ISO {{ iso }}</h2>
     <h2>Flash Coverage {{ `${flashCoverage}mm` }}</h2>
     <h2>Flash Output {{ `1/${1 / flashOutput}` }}</h2>
-    <h2>Guide Number {{ guideNumber }}</h2>
+    <h2>Guide Number {{ guideNumber.toFixed(2) }}</h2>
     <h2>Aperture {{ `1/${aperture}` }}</h2>
 
     <h2 style="color: red">Distance {{ `${distance.toFixed(2)}m` }}</h2>
