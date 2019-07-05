@@ -61,12 +61,12 @@
       always-dirty
       thumb-size="32"
       v-model="apertureIndex"
-      :tick-labels="apertureRange.map(v => `1/${v}`)"
+      :tick-labels="apertureRange"
       :value="0"
       :max="apertureRange.length - 1"
     >
       <template v-slot:thumb-label="props">
-        <span>{{ `1/${apertureRange[props.value]}` }}</span>
+        <span>{{ apertureRange[props.value] }}</span>
       </template>
     </v-slider>
 
