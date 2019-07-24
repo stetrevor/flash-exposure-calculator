@@ -1,6 +1,6 @@
 <template>
   <div class="Calculator">
-    <h1>Flash Exposure Calculator</h1>
+    <h1 class="headline">Flash Exposure Calculator</h1>
 
     <v-slider
       label="ISO"
@@ -70,13 +70,25 @@
       </template>
     </v-slider>
 
-    <h2>ISO {{ iso }}</h2>
-    <h2>Flash Coverage {{ `${flashCoverage}mm` }}</h2>
-    <h2>Flash Output {{ `1/${1 / flashOutput}` }}</h2>
-    <h2>Guide Number {{ guideNumber.toFixed(2) }}</h2>
-    <h2>Aperture {{ `1/${aperture}` }}</h2>
+    <h2 class="body-1">
+      ISO <span class="title">{{ iso }}</span>
+    </h2>
+    <h2 class="body-1">
+      Flash Coverage <span class="title">{{ `${flashCoverage}mm` }}</span>
+    </h2>
+    <h2 class="body-1">
+      Flash Output <span class="title">{{ `1/${1 / flashOutput}` }}</span>
+    </h2>
+    <h2 class="body-1">
+      Guide Number <span class="title">{{ guideNumber.toFixed(2) }}</span>
+    </h2>
+    <h2 class="body-1">
+      Aperture <span class="title">{{ `1/${aperture}` }}</span>
+    </h2>
 
-    <h2 style="color: red">Distance {{ `${distance.toFixed(2)}m` }}</h2>
+    <h2 class="body-1" style="color: red">
+      Distance <span class="title">{{ `${distance.toFixed(2)}m` }}</span>
+    </h2>
   </div>
 </template>
 
@@ -214,11 +226,19 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
+
 .Calculator {
   margin: 40px;
 }
 
 .v-input--slider {
   margin: 40px 0;
+}
+
+.headline,
+.title,
+.v-input--slider {
+  font-family: 'Rubik', sans-serif !important;
 }
 </style>
